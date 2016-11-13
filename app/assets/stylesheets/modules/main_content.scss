@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
+  color: $nameAndMessage;
+
+  .layout-notice {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .layout-notice, .layout-alert {
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: $whiteFont
+    ;
+    font-weight: 200;
+    text-align: center;
+  }
+  .layout-notice {
+     background-color: $lightBlue;
+  }
+  .layout-alert {
+     background-color: #d65f4c;
+  }
+  .layout-notification {
+    flex: 1;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.content {
+  min-width: 980px;
+  height: 100%;
+}
+
+.content-main {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: calc(100% - 300px);
+}
+
+.chat-header {
+  padding: 0 40px;
+
+  &--left {
+    float: left;
+    .users {
+      padding-bottom: 6px;
+      font-size: 12px;
+      color: $grayFont;
+    }
+
+    .group-name  {
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: $headerGroup;
+      margin-bottom: 15px;
+    }
+  }
+
+  &--right{
+    float: right;
+    .edit-btn{
+      margin: 28px 0px 0px;
+      height: 40px;
+      width: 60px;
+      padding: 10px 20px;
+      color: $lightBlue;
+      border: 1px solid $lightBlue;
+    }
+  }
+}
+
+
+.chat-body{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100% - 190px);
+  background-color: $mainBackground;
+  border-top: 1px solid $mainBorder;
+  overflow: scroll;
+}
+
+.chat-messages{
+  position: absolute;
+  padding-top: 46px;
+  padding-bottom: 40px;
+  right: 40px;
+  left: 40px;
+
+    .chat-message{
+
+      &__header {
+        margin-bottom: 10px;
+        line-height: 20px;
+      }
+      &__name {
+        float: left;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 16px;
+        color: $nameAndMessage;
+      }
+
+      &__date {
+        float: left;
+        font-size: 12px;
+        color: $grayFont;
+      }
+
+      &__content {
+        margin-bottom: 40px;
+        font-size: 14px;
+        color: $nameAndMessage;
+    }
+  }
+}
